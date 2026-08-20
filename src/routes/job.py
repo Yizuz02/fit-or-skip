@@ -6,6 +6,7 @@ from pydantic import BaseModel, Field
 from dotenv import load_dotenv
 
 from ..llm.schema import FitVerdict, JobEvaluationOutput, PrimaryDealbreaker
+from ..llm.model import evaluate_job
 
 load_dotenv()
 
@@ -59,4 +60,4 @@ async def evaluate(job: JobInput):
         )
 
     # In later stages, the real LLM call logic will live here
-    pass
+    return evaluate_job(job)

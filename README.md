@@ -96,3 +96,14 @@ curl -X POST http://127.0.0.1:8000/evaluate \
   "details": ...
 }
 ```
+
+
+## Stage 2 Observations & Learnings
+
+* **Structured Adherence**: Testing across different job postings shows the local model consistently follows the closed enum constraints for `fit_verdict` and `primary_dealbreaker` with low temperature ($0.2$).
+
+
+* **Unexpected Model Behavior**: Even when explicitly instructed to use an empty array `[]` when no skills are missing, the model occasionally outputs `["none"]` instead of `[]`.
+
+
+* **Engineering Takeaway**: A valid JSON structure does not guarantee domain-valid data. This highlights why schema validation and repair retry logic (Stage 3) are essential before trusting external model output in downstream systems.
