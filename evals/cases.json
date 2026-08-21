@@ -1,0 +1,142 @@
+{
+  "endpoint": "http://127.0.0.1:8000/evaluate",
+  "key_field": "fit_verdict",
+  "cases": [
+    {
+      "id": "01_strong_match",
+      "input": {
+        "field": "AI Engineering",
+        "job_title": "Junior AI Engineer",
+        "job_description": "We are seeking a Junior AI Engineer to build LLM pipelines and backend APIs with Python and LangChain. Strong SQL and Node.js skills are a plus. Remote role for Mexico candidates.",
+        "place": "Remote (Mexico)",
+        "company_name": "Tech Corp"
+      },
+      "expected": {
+        "fit_verdict": "strong_match",
+        "primary_dealbreaker": "none",
+        "missing_requirements": [],
+        "confidence_min": 0.5
+      },
+      "note": "Junior AI role, core stack (Python/LangChain), remote Mexico: textbook strong_match."
+    },
+    {
+      "id": "02_potential_match",
+      "input": {
+        "field": "Software Engineering",
+        "job_title": "Junior Backend Developer",
+        "job_description": "Junior backend developer to build REST APIs and maintain databases for our analytics platform. Python, Node.js and SQL are the daily tools. Familiarity with Redis or Kafka is a plus but not required. We mentor juniors and value clean code.",
+        "place": "Remote (Global)",
+        "company_name": "DataForge"
+      },
+      "expected": {
+        "fit_verdict": "potential_match",
+        "primary_dealbreaker": "none",
+        "missing_requirements": [],
+        "confidence_min": 0.5
+      },
+      "note": "Fits overall profile; only minor generic gaps (Redis/Kafka as optional extras)."
+    },
+    {
+      "id": "03_missing_tech",
+      "input": {
+        "field": "AI Engineering",
+        "job_title": "AI/ML Intern",
+        "job_description": "AI/ML intern to help deploy and serve models in production. You will containerize services with Docker, orchestrate with Kubernetes, and ship to AWS. Python and PyTorch experience is expected.",
+        "place": "Remote (Global)",
+        "company_name": "CloudSoft"
+      },
+      "expected": {
+        "fit_verdict": "missing_tech",
+        "primary_dealbreaker": "unsupported_tech_stack",
+        "missing_requirements": ["Docker", "Kubernetes", "AWS"],
+        "confidence_min": 0.5
+      },
+      "note": "Role the candidate could do, but requires specific tech not in the profile."
+    },
+    {
+      "id": "04_missing_skill",
+      "input": {
+        "field": "AI Engineering",
+        "job_title": "NLP Research Intern",
+        "job_description": "NLP research internship for students who have already published at least one peer-reviewed paper in natural language processing or computational linguistics. You will help fine-tune transformer models with PyTorch.",
+        "place": "Remote (Mexico)",
+        "company_name": "LinguaTech"
+      },
+      "expected": {
+        "fit_verdict": "missing_skill",
+        "primary_dealbreaker": "missing_core_skill",
+        "missing_requirements": ["published research in NLP"],
+        "confidence_min": 0.5
+      },
+      "note": "Non-tech prerequisite gap (published research) blocks the role."
+    },
+    {
+      "id": "05_skip_seniority",
+      "input": {
+        "field": "AI Engineering",
+        "job_title": "Senior Machine Learning Engineer",
+        "job_description": "Senior ML engineer with 5+ years of experience leading production deployments of large language models, distributed training, and team mentorship. Deep PyTorch expertise required.",
+        "place": "Remote (Mexico)",
+        "company_name": "MetaScale"
+      },
+      "expected": {
+        "fit_verdict": "skip",
+        "primary_dealbreaker": "seniority_mismatch",
+        "missing_requirements": [],
+        "confidence_min": 0.5
+      },
+      "note": "Senior level must never be anything but skip."
+    },
+    {
+      "id": "06_skip_location",
+      "input": {
+        "field": "AI Engineering",
+        "job_title": "Junior AI Engineer",
+        "job_description": "Entry-level AI engineer to join our office in Austin, Texas. You will build RAG pipelines and integrate LLMs in Python. Relocation required; visa sponsorship is not provided.",
+        "place": "Austin, TX (On-site)",
+        "company_name": "US Tech Corp"
+      },
+      "expected": {
+        "fit_verdict": "skip",
+        "primary_dealbreaker": "location_or_visa_ineligible",
+        "missing_requirements": [],
+        "confidence_min": 0.5
+      },
+      "note": "On-site international job without visa sponsorship is a hard blocker."
+    },
+    {
+      "id": "07_skip_non_engineering",
+      "input": {
+        "field": "Marketing",
+        "job_title": "Marketing Intern",
+        "job_description": "Marketing intern to own our social media calendar, write campaign copy, run email newsletters, and analyze engagement metrics with spreadsheets. Creativity and excellent writing skills matter more than any technical background.",
+        "place": "Remote (Global)",
+        "company_name": "BrightAds"
+      },
+      "expected": {
+        "fit_verdict": "skip",
+        "primary_dealbreaker": "non_engineering_role",
+        "missing_requirements": [],
+        "confidence_min": 0.5
+      },
+      "note": "Non-technical role: hard skip regardless of location."
+    },
+    {
+      "id": "08_ambiguous_unsure",
+      "input": {
+        "field": "Technology",
+        "job_title": "Rockstar Developer Wanted",
+        "job_description": "We are a fast-growing startup looking for a talented person to help us scale our product. Competitive salary, great culture, and equity offered. If you are passionate and driven, send us your resume and we will take it from there.",
+        "place": "Not specified",
+        "company_name": "Stealth Startup"
+      },
+      "expected": {
+        "fit_verdict": "skip",
+        "primary_dealbreaker": "unsupported_tech_stack",
+        "missing_requirements": [],
+        "confidence_max": 0.5
+      },
+      "note": "Ambiguous/incomplete posting: must hit the 'when unsure' rule, never guess a match."
+    }
+  ]
+}

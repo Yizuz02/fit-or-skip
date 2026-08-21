@@ -1,0 +1,2 @@
+{"timestamp": "2026-08-21T01:11:48.192083+00:00", "prompt_version": "evaluate-job-v2", "endpoint": "http://127.0.0.1:8000/evaluate", "total": 8, "key_score": 6, "key_field": "fit_verdict", "strict_score": 5, "failed_ids": ["02_potential_match", "04_missing_skill"]}
+{"timestamp": "2026-08-21T01:12:44.056512+00:00", "prompt_version": "evaluate-job-v2", "endpoint": "http://127.0.0.1:8000/evaluate", "total": 8, "key_score": 6, "key_field": "fit_verdict", "strict_score": 5, "failed_ids": ["02_potential_match", "04_missing_skill"]}
