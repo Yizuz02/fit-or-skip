@@ -1,0 +1,2 @@
+{"timestamp": "2026-08-21T00:59:51.501410+00:00", "prompt_version": "evaluate-job-v2", "model": "gemma4:e2b", "input_tokens": 1547, "output_tokens": 615, "duration_ms": 5713.65, "needed_repair": false}
+{"timestamp": "2026-08-21T01:00:18.543215+00:00", "prompt_version": "evaluate-job-v2", "model": "gemma4:e2b", "input_tokens": 1556, "output_tokens": 607, "duration_ms": 5675.63, "needed_repair": false}
